@@ -1,0 +1,1282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;    
+    font-size: 13px;
+    overflow-x: hidden;                               /* para que todo conteudo que for horizontal seja ignorado, para não criar barra horizontal */
+}
+
+header{
+    height: 100px;
+    background-color: black;
+}
+.headerC{
+    max-width: 1140px;
+    height: 100px;    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+}
+.logo{
+    width:100px;
+}
+.logoimg{
+    width: 80px;
+    height: 80px;
+    background-color: #00407e;
+    background-image: url('../imagens/material/complementos/logoweb02.png');
+    background-size: cover;
+    background-position: center;
+
+}
+.menu-opener{
+    display: none;
+}
+.menu{
+    flex: 1;
+    /* background-color: rgb(255, 0, 0); */
+    display: flex;
+    justify-content: flex-end;
+}
+.menu ul,
+.menu li{
+    list-style: none;
+
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;    
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100px;
+    display: flex;                                        /* Nesse caso tivemos que usar diplau flex para aceitar o ajuste do texto */    /* displey inline não tem altura, precisa colocar um block para mexer na altura */
+    align-items: center;
+    border-bottom:5px solid black;                         /* Aqui apenas para o texto não saltar um pouco */
+}
+.menu li a:hover{
+    border-bottom: 5px solid #00a7c3;
+    color: #ccc
+}
+.menu .active a{
+    border-bottom: 5px solid #00a7c3;
+}
+.banner1{
+    height: calc(100vh - 100px);                               /* 100hv o tamanho do monitor p calc menos 100px do header, para ficar completo */
+    background-color: #333;
+    background-image: url('../imagens/material/complementos/Bgweb01.png');
+    background-size: cover;                                     /* ajuste do tamanho da imagem apra preencher o espaço */
+   /*  background-position:; */                                    /* ajuste de posição, mas não estou utilizando */
+    overflow: hidden;                                               /* tudo que for maior que a tela ele não vaia aprecer, ( para aprecer um slide por vez) */
+    
+
+}
+.banner1 .sliders{
+    width: 1000vw ;                             /* aqui a largura tem que ter o tamanhdo da tela para suporta no exemplo até 10 slide de 100VW */
+    height: 100%;
+    
+}
+.banner1 .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;                          /* aqui para um ficar ao lado do outro usamos o inline e o block para amnder as proposções que colocarmos */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.banner1 .slidearea{
+    display: flex;
+    flex-direction: column;                             /* foi utilizado cloumm, pois o display flex deixa um ao lado do outro e eu quero um a baixo do outro */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fffcff    
+
+}
+.banner1 h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+.banner1 h1 span{
+    color: #00a7c3 ;
+    margin-left: 60px;
+}
+.banner1 .slider-pointers{
+    width: 100vw;
+    height: 20px;    
+    position: absolute;
+    margin-top: -50px;                          /* foi utilizado o absoluti para entra dentro do banner junto com o margin negativo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner1 .pointer{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #00a7c3;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.banner1 .slider-pointers .active{
+    background-color: #00a7c3;
+}
+
+.padrao{
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.padrao .section-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+}
+.padrao .section-desc{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(204, 204, 204, 0.753);
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+.padrao .section-body{
+    margin: auto;
+    max-width: 1140px;                          /* Aqui o tamanho será o mesmo definido lá em cima na pag toda */
+}
+.padrao.light{
+    background-color: #f7f7f7;
+
+}
+.padrao.light .section-title{
+    color: black;
+}
+.padrao.light .section-body{
+    color: black;
+}
+.padrao.dark{
+    background-color: black;
+}
+.padrao.dark .section-title{
+    color: #fffFff;
+}
+.padrao.dark .section-body{
+    color: #fffFff;
+}
+.button{
+    display: block;
+    margin-left: 210px;
+    background-color: #00a7c3;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 130px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS de áreas especificas */
+
+.section-sobre{
+    display: flex;
+}
+.section-sobre--esquerda{
+    flex: 1;
+
+}
+.section-sobre--esquerda p{
+    font-size: 14px;
+    line-height: 25px;
+}
+.section-sobre--direita{
+    width: 500px;
+    text-align: center;
+    
+}
+.section-sobre--direita img{
+    width: 480px;
+    box-shadow: 2px 6px 10px #333;
+
+}
+.section-serviçoS{
+    display: flex;
+}
+.section-serviço{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+    
+}
+.section-serviço:first-child{
+    border-left: 1px solid #333;
+
+}
+.section-serviço h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.section-serviço p{
+    color: #999;
+}
+
+.section-projetos{
+    display: flex;
+    flex-direction: column;                 /* aqui foi utlizato esses comandos para alinha no centro os menu de filtros */
+    align-items: center;
+
+}
+
+.section-projetos-filtros{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+.section-projetos-filtros ul,
+.section-projetos-filtros li{
+    list-style: none;
+
+}
+.section-projetos-filtros li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+    border-left: 1px solid #ccc;
+    color: #555;
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+}
+.section-projetos-filtros li:hover,
+.section-projetos-filtros li.active{
+    border-bottom: 3px solid #00a7c3;
+}
+
+.section-projetos-filtros li:first-child{
+    border-left: none;
+}
+
+.section-projetos-fotoS{
+    width: 100vw;                               /* aqui colocamos o tamnho da tela toda, porém com limitador do tamanho que estamos usando */
+    max-width: 1140px;
+    margin-top: 20px;    
+    display: flex;
+    flex-wrap: wrap;                    /* aqui é pra deixar uma ao lado da outra, porém caso não caiba no monitor ele pode quebrar e ir para liha de baixo */
+    justify-content: center;
+
+
+
+
+}
+.section-projetos-foto{
+    width: 280px;
+    
+    
+}
+.section-projetos-fotoarea{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section-projetos-fotoarea img{
+    width: inherit;                             /* aqui utilizado para herdar os tamanhos do item anterior, no caso a foto area */
+    height: inherit;
+
+}
+.section-projetos-fotoinfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: inherit;                             /* aqui utilizado para herdar os tamanhos do item anterior, no caso a foto area */
+    height: inherit;
+    display: none;                              /* aqui só deve aprecer quando passarmos o mouse no hover */
+    flex-direction: column;                        /* aqui para que as frases fiquem um a baixo da outra */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 15px;
+    line-height: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.section-projetos-fotoinfo h5{
+    font-size: 17px;
+}
+.section-projetos-fotoarea:hover .section-projetos-fotoinfo{            /* aqui é para passar o moude no foto area e altera a priedade do foto info */
+    display: flex;                       /* colocando o displey felz já é o sulficiente apra ele aprecer, uma vez que antes ele está NONE */
+
+}
+.button-projetos{
+    display: block;
+    align-items: center;
+    background-color: #00a7c3;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px ;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 130px;
+    text-align: center;
+}
+
+.bg_time{
+    background-image: url('../imagens/material/complementos/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0;                 /* aqui utilizamos o paddin 0 colocando o padding n sectio area para cobrir a area toda */
+}
+
+.section-time-area{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.section-time{
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;               /* para alinhar no meio o conteudo */ 
+}
+.section-time .sliders{
+    width: 1000vw ;                             /* aqui a largura tem que ter o tamanhdo da tela para suporta no exemplo até 10 slide de 100VW */
+    height: 100%;
+    
+}
+.section-time .slide{
+    width: 280px;
+    height: 300px;
+    display: inline-block;                          /* aqui para um ficar ao lado do outro usamos o inline e o block para amnder as proposções que colocarmos */
+    background-color: #fffFff;
+    margin-right: 20px;
+}
+.section-time .slidearea{
+    display: flex;
+    flex-direction: column;                             /* foi utilizado cloumm, pois o display flex deixa um ao lado do outro e eu quero um a baixo do outro */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding: 25px;  
+
+}
+.section-time-area .slider-pointers{
+    margin-top: 30px;
+    height: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-time-area .pointer{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #00a7c3;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.section-time-area .slider-pointers .active{
+    background-color: #00a7c3;
+}
+.section-time-avatar{
+    width: 160px;
+    height: auto;
+
+}
+.section-time-name{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+
+}
+.section-time-funcao{
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+
+}
+.section-time-social{
+    display: flex;
+    margin-top: 20px;
+
+    
+
+}
+.section-time-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;            /* utilizamos para fcficar amis facil de centralizar os tres prop acima */
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 13px;
+    margin-right: 10px;
+}
+.section-time-social a:hover{
+    background-color: #00a7c3 ;
+}
+.section-cliente-area{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.slidearea-cliente{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.section-cliente-name{
+    padding-top: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    color: #000;
+
+}
+.section-cliente-funcao{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+.section-cliente-aspas{
+    padding-top: 20px;  
+}
+.section-cliente-comentario{
+    padding-top: 10px;
+    text-align: center;
+    width: 80vw;
+    color: #999;
+}
+
+
+
+
+
+
+.section-cliente-area .slider-pointers{
+    margin-top: 30px;
+    height: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.section-cliente-area .pointer{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #00a7c3;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.section-cliente-area .slider-pointers .active{
+    background-color: #00a7c3;
+}
+.patrocino-conteudo{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.patrocinio-marcas{
+    margin-right: 55px;
+    width: 10vw;
+}
+
+.section-produtos-preco{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.section-preco{
+    padding: 30px;
+    margin-right: 25px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    
+}
+.section-preco h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.section-preco h3{
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.section-preco h4{
+    font-size: 13px;
+    font-weight: 400;
+    color: #999;
+    padding-bottom: 15px;
+}
+.section-preco p{
+    font-size: 13px;
+    color: #808080;
+}
+.line{
+    border: 1px solid #ccc;
+   
+    
+}
+.section-preco a{
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+    background-color: #808080;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 130px;
+    text-align: center;
+}
+.section-preco a:hover{
+    background-color: #00a7c3;
+
+}
+.section-produtobox .section-title{
+    padding-top: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+
+}
+.section-produtobox .section-desc{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ccc;
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+.section-box-cont{
+    display: flex;
+    width: 980px;
+    
+    
+    
+}
+
+.section-box-img{
+    flex: 1;
+    align-items: center;
+    margin-left: 220px;
+    margin-right: 100px;
+
+}
+.section-box-img img{
+    width: 300px;
+    height: 310px;
+}
+
+.section-check{
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+}
+.section-box-recurso-descricao p{
+    margin-left: 55px;
+    padding-top: 5px;    
+    color: #999;
+}
+.section-box-recurso-check{
+    display: flex; 
+    padding-top: 25px;
+    
+
+}
+
+.section-box-recurso-descricao .check{
+    margin-right: 20px;
+}
+.section-box-area .slider-pointers{
+    margin-top: 30px;
+    height: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.section-box-area .pointer{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #00a7c3;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.section-box-area .slider-pointers .active{
+    background-color: #00a7c3;
+}
+.area-line01{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line01{
+    width: 900px;
+    display: block;    
+    margin-top: 50px;
+    margin-bottom: 50px;    
+    border: 1px solid #ccc;
+    align-items: center;
+    
+    
+}
+.area-button{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    
+}
+.area-button .button001{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.area-button .button001 a{
+    display: block;  
+    background-color: #00a7c3;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration:none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 180px;
+    text-align: center;
+}
+.section-fatoS{
+    display: flex;
+}
+.section-fato-descri{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-right: 20px;
+}
+.section-fato-descri h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: #00a7c3;
+
+}
+.section-fato-descri h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+.section-fato-descri p{
+    font-size: 12px;
+    color: #999;
+
+}
+.area-line02{
+    padding-top: 7px;
+    padding-bottom: 5px;
+
+}
+.area-line02 .line02{
+    border-bottom: 3px solid #999;
+    width: 18px;
+}
+.contatos-redes-body{
+    display: flex;
+    justify-content: center;
+   
+}
+.contatos-rede{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.contatos-rede .contsrede{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    color: #999;
+
+
+
+}
+.contatos-rede p{
+    font-size: 9px;
+    font-weight: bold;
+    color: #999;
+    margin-left: 5px;
+}
+.contatos-rede .share{
+    margin-right: 10px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.contatos-rede img{
+    width: 30px;
+    height: 30px;
+}
+.contate-nos{
+    display: flex;   
+    justify-content: center;
+}
+.contate-nos form{
+    display: flex;
+    flex-direction: column;
+}
+.contate-nos form .assunto{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    background-color:#f7f7f7 ;
+    padding-bottom: 10px;    
+    width: 520px; 
+}
+
+
+
+.contate-nos .button{
+    display: block;  
+    background-color: #00a7c3;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;    
+    margin-top: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+
+}
+
+.contate-nos textarea{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    background-color:#f7f7f7;    
+    padding-top: 35px;    
+    width: 520px; 
+}
+
+.section-contact--split{
+    margin-bottom: 35px;
+}
+.section-contact--split input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #999;
+    background-color:#f7f7f7 ;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    width: 250px;
+    
+    
+}
+
+.section-map{
+    background-image: url("../imagens/material/complementos/mapa.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.section-map-area{
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+}
+.section-map-info{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    color: #000;
+}
+.section-map-info-item{
+    display: flex;
+    align-items: center;
+    color: #999;
+    margin-bottom: 20px;
+}
+.section-map-info-item-img{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    margin-right: 15px;
+
+}
+.section-map-info-item-img img{
+    width: 15px;
+    height: auto;
+}
+footer{
+    background-color: #000;
+}
+.footer--area{
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    color: #fff;
+    
+}
+.footer--item-area1{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    margin-right: 40px;
+    width: 300px;
+    
+
+}
+.footer-social{
+    display: inline-flex;
+    
+}
+.footer-social a{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.footer-social a:hover{
+    background-color: #00a7c3;
+}
+
+.footer--item-area2{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    margin-right: 20px;
+    display: block;
+    width: 300px;
+    color: #999;
+    font-size: 12px;
+
+}
+.footer--item-area3{
+    display: flex;   
+    padding-top: 30px;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-items: center;
+
+}
+.footer--item-area3 form{
+    display: inline-flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    
+    width: 350px;
+    height: 180px;
+}
+.footer--item-area3 input{
+    border: none;
+    background-color: #333;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    width: 220px;
+    outline: none;
+    color: #fff;
+}
+.footer--item-area3 ::placeholder{
+    font-size: 18px;
+    text-align: center;
+
+}
+.footer--item-area3 .buttonf1{
+    display: block;    
+    background-color: #00a7c3;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    width: 130px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (min-width:450px) and (max-width:800px){
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: flex;
+        width: 45px;
+        margin-right: 30px;
+        
+    }
+    nav ul{
+        display: none;
+        position: absolute;                                         /* menu flutuante */
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;       
+
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: #00a7c3;
+    }
+    .section-sobre{
+        flex-direction: column;
+        
+    }
+    .section-sobre--esquerda{        
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        
+    }
+    .section-sobre--esquerda .button{
+        margin-left: 290px;
+        
+
+    }
+    .section-sobre--direita{            /* aqui utilizamos da div das areas para mexer no conteudo */
+        width: auto;
+    }
+    .section-serviçoS{
+        flex-wrap: wrap;                /* AQUI É PARA QUE QUANDO NÃO COUBER NA TELA ELE IR APRA LINHA DE BAIXO */
+    }
+    .section-serviço{
+        min-width: 50%;                     /* aqui utilizado pois o ime precisa de uma oritanção de tamanho */ 
+        margin-bottom: 30px;
+    }
+    .section-time{
+        max-width: 580px;
+    }
+    .patrocino-conteudo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .patrocinio-marcas{
+        display: flex;
+        align-items: center;
+        justify-items:center ;
+        justify-content: center;
+        margin-right: 0;
+        width: 25vw;
+        margin-bottom: 30px;
+           
+    }
+    .section-produtos-preco{
+        flex-wrap: wrap;
+
+    }
+    .section-preco{
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+    .section-box-cont{
+        flex-wrap: wrap;
+    }
+    .section-box-recurso-descricao{
+        margin-left: 30px;
+    }
+    .section-fato-descri{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-map-area{
+        width: auto;
+    }
+    .section-map-info{
+        width: auto;                    /* aqui para pegar toda a area disponivel */
+    }
+    .section-map-info-item{
+        margin-bottom: 20px;
+    }
+    .section-map-info-item:last-child{
+        margin-bottom: 0;
+    }
+    .footer--area{
+        padding: 20px;
+    }
+    .footer--item-area3 form{
+        width: 250px;
+    }
+
+}
+
+
+
+
+
+@media(max-width:450px){
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    nav ul{
+        display: none;
+        position: absolute;                                         /* manu flutuante */
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100vw;                                               /* tamanho do menu ao se clicado */
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;       
+
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 60px;
+        font-size: 22px;
+        margin-left: 30px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: #00a7c3;
+    }
+    .banner1 h1{
+        font-size: 40px;
+    }
+    .section-sobre{
+        flex-direction: column;
+        
+    }
+    .section-sobre--esquerda{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .section-sobre--esquerda .button{
+        margin-left: 0;
+        
+        
+        
+    }
+    .section-sobre--direita{            /* aqui utilizamos da div das areas para mexer no conteudo */
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .section-sobre--direita img{
+        width: 100%;                /* aqui para a imagem ajustar após a colocação de margin, pois estava com tamanho fixo */
+    }
+    .section-serviçoS{
+        flex-wrap: wrap;                /* AQUI É PARA QUE QUANDO NÃO COUBER NA TELA ELE IR APRA LINHA DE BAIXO */
+    }
+    .section-serviço{
+        min-width: 100%;                     /* aqui utilizado pois o ime precisa de uma oritanção de tamanho */ /* alterado apra 100% 1 por espaço */ 
+        margin-bottom: 30px;
+    }
+    .section-projetos-filtros{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .section-projetos-filtros ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-projetos-fotoarea{
+        width: 300px;
+        height: 190px;
+    }
+
+    .section-time{
+        max-width: 280px;               /* diminue a area do time para ajustar a amostra  em mobile */
+    }
+    .patrocino-conteudo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .patrocinio-marcas{
+        display: flex;
+        align-items: center;
+        justify-items:center ;
+        justify-content: center;
+        margin-right: 0;
+        width: 30vw;            
+        margin-bottom: 30px;           
+    }
+    .section-produtos-preco{
+        flex-wrap: wrap;
+
+    }
+    .section-preco{
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+    .section-box-cont{               
+        flex-wrap: wrap;
+        width: 400px;
+        margin-left: 30px;          
+    }
+    .section-box-img{
+        margin-left: 0;
+    }
+    .section-fatoS{   
+        display: flex;
+        flex-direction: column;
+    }
+    .contatos-redes-body{
+        flex-wrap: wrap;
+    }
+    .contatos-rede{
+        width: 20vw;        
+        margin-right:0;
+        margin-left: 50px;
+        padding-bottom: 10px;
+    }
+    .contate-nos{
+        display: block;
+        width: 550px;
+        padding-left: 26px;
+        justify-content: center;       
+    }
+    .section-contact--split input{
+        width: 170px;       
+    }
+    .contate-nos form .assunto{
+        width: 360px;
+    }
+    .contate-nos textarea{
+        width: 360px;
+    }
+    .contate-nos .button{
+        margin-left: 125px;
+    }
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-map-area{
+        width: auto;
+    }
+    .section-map-info{
+        width: auto;                    /* aqui para pegar toda a area disponivel */
+    }
+    .section-map-info-item{
+        margin-bottom: 20px;
+    }
+    .section-map-info-item:last-child{
+        margin-bottom: 0;
+    }
+    .footer--area{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .footer--item-area1,
+    .footer--item-area2{
+        padding-bottom: 0;
+    }
+    
+    
+
+
+
+
+
+} 
+

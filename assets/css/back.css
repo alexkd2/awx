@@ -1,0 +1,286 @@
+@media(min-width:450px) and (max-width:800px){                                    /* conceito para tablet */
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    nav{
+        display: none;
+        position: absolute;                                         /* menu flutuante */
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;       
+
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: #00a7c3;
+    }
+    .section-sobre{
+        flex-direction: column;
+        
+    }
+    .section-sobre--esquerda{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+       
+    }
+    .section-sobre--direita{            /* aqui utilizamos da div das areas para mexer no conteudo */
+        width: auto;
+    }
+    .section-serviçoS{
+        flex-wrap: wrap;                /* AQUI É PARA QUE QUANDO NÃO COUBER NA TELA ELE IR APRA LINHA DE BAIXO */
+    }
+    .section-serviço{
+        min-width: 50%;                     /* aqui utilizado pois o ime precisa de uma oritanção de tamanho */ 
+        margin-bottom: 30px;
+    }
+    .section-time{
+        max-width: 580px;
+    }
+    
+    .patrocino-conteudo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .patrocinio-marcas{
+        display: flex;
+        align-items: center;
+        justify-items:center ;
+        justify-content: center;
+        margin-right: 0;
+        width: 25vw;
+        margin-bottom: 30px;
+           
+    }
+
+    .section-produtos-preco{
+        flex-wrap: wrap;
+
+    }
+    .section-preco{
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+    .section-box-cont{
+        flex-wrap: wrap;
+    }
+    .section-box-recurso-descricao{
+        margin-left: 30px;
+    }
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-map-area{
+        width: auto;
+    }
+    .section-map-info{
+        width: auto;                    /* aqui para pegar toda a area disponivel */
+    }
+    .section-map-info-item{
+        margin-bottom: 20px;
+    }
+    .section-map-info-item:last-child{
+        margin-bottom: 0;
+    }
+    .footer--area{
+        padding: 20px;
+    }
+    .footer--item-area3 form{
+        width: 250px;
+    }
+
+
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:450px){                                    /* conceito para tablet */
+    .logo{
+        margin-left: 30px;
+    }
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    nav{
+        display: none;
+        position: absolute;                                         /* manu flutuante */
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100vw;                                               /* tamanho do menu ao se clicado */
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;       
+
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 60px;
+        font-size: 22px;
+        margin-left: 30px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: #00a7c3;
+    }
+    .banner1 h1{
+        font-size: 40px;
+    }
+    
+    }
+    .section-sobre{
+        flex-direction: column;
+        
+    }
+    .section-sobre--esquerda{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .section-sobre--esquerda .button{
+        margin-left: 0;
+        
+        
+        
+    }
+    .section-sobre--direita{            /* aqui utilizamos da div das areas para mexer no conteudo */
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .section-sobre--direita img{
+        width: 100%;                /* aqui para a imagem ajustar após a colocação de margin, pois estava com tamanho fixo */
+    }
+    .section-serviçoS{
+        flex-wrap: wrap;                /* AQUI É PARA QUE QUANDO NÃO COUBER NA TELA ELE IR APRA LINHA DE BAIXO */
+    }
+    .section-serviço{
+        min-width: 100%;                     /* aqui utilizado pois o ime precisa de uma oritanção de tamanho */ /* alterado apra 100% 1 por espaço */ 
+        margin-bottom: 30px;
+    }
+
+    .section-projetos-filtros{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .section-projetos-filtros ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    
+    .section-projetos-fotoarea{
+        width: 300px;
+        height: 190px;
+    }
+
+    .section-time{
+        max-width: 280px;               /* diminue a area do time para ajustar a amostra  em mobile */
+    }
+    
+    .patrocino-conteudo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .patrocinio-marcas{
+        display: flex;
+        align-items: center;
+        justify-items:center ;
+        justify-content: center;
+        margin-right: 0;
+        
+        margin-bottom: 30px;
+           
+    }
+   
+    .section-produtos-preco{
+        flex-wrap: wrap;
+
+    }
+    .section-preco{
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+    
+     .section-box-cont{               
+        flex-wrap: wrap;
+        
+        
+           
+    }
+    
+    .section-box-recurso-descricao{
+        
+        
+    } 
+     .section-fatoS{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-fato-descri{
+        margin-right: 0;
+    }
+
+    
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-map-area{
+        width: auto;
+    }
+    .section-map-info{
+        width: auto;                    /* aqui para pegar toda a area disponivel */
+    }
+    .section-map-info-item{
+        margin-bottom: 20px;
+    }
+    .section-map-info-item:last-child{
+        margin-bottom: 0;
+    }
+
+
+}
